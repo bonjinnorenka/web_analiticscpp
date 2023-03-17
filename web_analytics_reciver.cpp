@@ -10,6 +10,7 @@ using json = nlohmann::json;
 
 void return_json(json jsondata){
     std::cout << "Content-Type: application/json";
+    std::cout << "\nCache-Control: no-cache";
     std::cout << "\n\n";
     std::cout << jsondata.dump() << std::endl;
     exit(1);
